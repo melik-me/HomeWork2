@@ -37,15 +37,20 @@ q = 'y'
 
 while q == 'y':
     n = int(input('Please enter some integer. I will try to output next even integer.\n'))
-    if n % 2 == 0:
-        print('Next even integer is',n+2,'\n')
-        q = input('Press "y" if you want to repeat this step.\n')
-    else:
-        print('Next even integer is', n + 1, '\n')
-        q = input('Press "y" if you want to repeat this step.\n')
+#============ Здесь было предложение решить всё в одну строку ============
+#    if n % 2 == 0:
+#        print('Next even integer is',n+2,'\n')
+#        q = input('Press "y" if you want to repeat this step.\n')
+#    else:
+#        print('Next even integer is', n + 1, '\n')
+#        q = input('Press "y" if you want to repeat this step.\n')
+
+    print('Next even integer is',n + 2 - (n % 2))
+    q = input('Press "y" if you want to repeat this step.\n')
+#=========================================================================
 
 # Дано положительное действительное число X. Выведите его дробную часть.
-
+# =========== Здесь не было ограничения на положительные числа ===========
 q = 'y'
 
 while q == 'y':
@@ -53,12 +58,18 @@ while q == 'y':
     if x > 0:
         print("The fraction is ",x - x // 1,".\n")
         q = input('Press "y" if you want to repeat this step.\n')
-    else:
-        print("Hey! Make it positive!\n")
+    elif x < 0:
+        x *= -1
+        print("The fraction is ",-1 * (x - x // 1),".\n")
         q = input('Press "y" if you want to repeat this step.\n')
+    else:
+        print("Number you've entered is 0. It doesn't have a fraction.")
+        q = input('Press "y" if you want to repeat this step.\n')
+#=========================================================================
+
 
 # Дано положительное действительное число X. Выведите его первую цифру после десятичной точки.
-
+# =========== Здесь не было ограничения на положительные числа ===========
 q = 'y'
 
 while q == 'y':
@@ -66,6 +77,11 @@ while q == 'y':
     if x > 0:
         print("The answer is",str(x - x// 1)[2])
         q = input('Press "y" if you want to repeat this step.\n')
-    else:
-        print("Hey! Make it positive!\n")
+    elif x < 0:
+        x *= -1
+        print("The answer is", str(x - x // 1)[2])
         q = input('Press "y" if you want to repeat this step.\n')
+    else:
+        print("The answer is 0.")
+        q = input('Press "y" if you want to repeat this step.\n')
+#=========================================================================
