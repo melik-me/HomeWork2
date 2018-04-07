@@ -51,16 +51,20 @@ while q == 'y':
 
 # Дано положительное действительное число X. Выведите его дробную часть.
 # =========== Здесь не было ограничения на положительные числа ===========
+# ================= А теперь ещё и одной формулой сделай =================
 q = 'y'
 
 while q == 'y':
     x = float(input("Please enter some real number. I will try to output it's fraction.\n"))
-    if x > 0:
-        print("The fraction is ",x - x // 1,".\n")
-        q = input('Press "y" if you want to repeat this step.\n')
-    elif x < 0:
-        x *= -1
-        print("The fraction is ",-1 * (x - x // 1),".\n")
+#    if x > 0:
+#        print("The fraction is ",x - x // 1,".\n")
+#        q = input('Press "y" if you want to repeat this step.\n')
+#    elif x < 0:
+#        x *= -1
+#        print("The fraction is ",-1 * (x - x // 1),".\n")
+#        q = input('Press "y" if you want to repeat this step.\n')
+    if x != 0:
+        print("The fraction is ", x - int(x))
         q = input('Press "y" if you want to repeat this step.\n')
     else:
         print("Number you've entered is 0. It doesn't have a fraction.")
